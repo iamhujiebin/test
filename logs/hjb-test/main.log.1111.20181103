@@ -1,0 +1,19 @@
+2018-11-03 12:11:32.033 [INF] test5.go:25:main  info
+2018-11-03 12:14:08.806 [INF] test5.go:25:main  info
+2018-11-03 12:14:08.806 [ERR] test5.go:26:main  error
+2018-11-03 12:15:12.286 [INF] test5.go:27:main  info
+2018-11-03 12:15:12.286 [ERR] test5.go:28:main  error
+2018-11-03 12:15:12.286 [INF] test5.go:33:test  test in info
+2018-11-03 12:16:55.097 [INF] test5.go:27:main  info
+2018-11-03 12:16:55.097 [ERR] test5.go:28:main  error
+2018-11-03 12:16:55.097 [INF] test5.go:34:test  test in info
+2018-11-03 12:21:41.34 [TRC] test5.go:25:main  test
+2018-11-03 12:21:41.34 [DBG] test5.go:26:main  var = abc
+2018-11-03 12:21:41.369 [INF] test5.go:27:main  info
+2018-11-03 12:21:41.369 [ERR] test5.go:28:main  error
+2018-11-03 12:21:41.369 [INF] test5.go:33:test  test in info
+2018-11-03 12:22:12.008 [TRC] test5.go:23:main  trace
+2018-11-03 12:22:12.008 [DBG] test5.go:24:main  var = debug
+2018-11-03 12:22:12.008 [INF] test5.go:25:main  info
+2018-11-03 12:22:12.008 [ERR] test5.go:26:main  error
+2018-11-03 12:22:12.008 [INF] test5.go:31:test  test in info
