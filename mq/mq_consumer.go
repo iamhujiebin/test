@@ -140,7 +140,7 @@ func consumeHJBQueue() {
 			logger.Errorf("create consumer fail. %v", err)
 		} else {
 			for msg := range msgChan {
-				msg.Ack(false)
+				msg.Ack(false) //消费者需要ack告诉生产者我已经收到了！
 				var _msg _Msg
 				json.Unmarshal(msg.Body, &_msg)
 				_msg.EndTime = time.Now()

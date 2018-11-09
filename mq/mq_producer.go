@@ -62,8 +62,8 @@ func main() {
 		return
 	}
 	HJBMqChannel = new(mq.RabbitMqChannelHelper)
-	//err = HJBMqChannel.Init("hjb", HJBMqConnHelper, registerListener, nil)
-	err = HJBMqChannel.Init("hjb", HJBMqConnHelper, nil, nil)
+	err = HJBMqChannel.Init("hjb", HJBMqConnHelper, registerListener, nil)
+	//err = HJBMqChannel.Init("hjb", HJBMqConnHelper, nil, logger)
 	if err != nil {
 		logger.Error("Init mq channel fail", err)
 		return
@@ -126,7 +126,8 @@ func publishToExchange() {
 }
 
 func registerListener(channel *amqp.Channel) {
-	channel.Confirm(false)
+	channel.Confirm(false) //生产者需要用到confirm，生产是否需要确实消费者有否ack回包
+	logger.Debug("channel confirm ,new time called")
 	notifyPublishChan := channel.NotifyPublish(make(chan amqp.Confirmation))
 	go func() {
 		for t := range notifyPublishChan {
