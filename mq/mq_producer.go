@@ -62,8 +62,8 @@ func main() {
 		return
 	}
 	HJBMqChannel = new(mq.RabbitMqChannelHelper)
-	err = HJBMqChannel.Init("hjb", HJBMqConnHelper, registerListener, nil)
-	//err = HJBMqChannel.Init("hjb", HJBMqConnHelper, nil, logger)
+	//err = HJBMqChannel.Init("hjb", HJBMqConnHelper, registerListener, nil)
+	err = HJBMqChannel.Init("hjb", HJBMqConnHelper, nil, logger)
 	if err != nil {
 		logger.Error("Init mq channel fail", err)
 		return
@@ -85,7 +85,8 @@ func DeclareHJBExchange() {
 		logger.Error("Declare channel open channel is nil")
 		return
 	}
-	err := ch.ExchangeDeclare(HJBExchange, "direct", true, false, false, false, nil)
+	//err := ch.ExchangeDeclare(HJBExchange, "direct", true, false, false, false, nil)
+	err := ch.ExchangeDeclare(HJBExchange, "direct", false, true, false, false, nil)
 	if err != nil {
 		logger.Errorf("exchange declare fail,err is %v", err)
 	}
@@ -113,7 +114,8 @@ func publishToExchange() {
 		}
 		j, _ := json.Marshal(_msg)
 		msg.Body = []byte(j)
-		//logger.Infof("task:%d,msg", i)
+		msg.DeliveryMode = uint8(2)
+		//logger.Infof("task:%d,msg mode:%d", i, msg.DeliveryMode)
 		err = HJBMqChannel.WrapPublish(HJBExchange, HJBRoutingKey, false, false, msg)
 		if err != nil {
 			logger.Errorf("publish fail:%d", i)

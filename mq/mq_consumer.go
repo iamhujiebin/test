@@ -83,7 +83,8 @@ func DeclareHJBExchange() {
 		logger.Error("Declare channel open channel is nil")
 		return
 	}
-	err := ch.ExchangeDeclare(HJBExchange, "direct", true, false, false, false, nil)
+	//err := ch.ExchangeDeclare(HJBExchange, "direct", true, false, false, false, nil)
+	err := ch.ExchangeDeclare(HJBExchange, "direct", false, true, false, false, nil) //不做持久化
 	if err != nil {
 		logger.Errorf("exchange declare fail,err is %v", err)
 	}
@@ -99,7 +100,8 @@ func DeclareHJBQueue() {
 		logger.Error("open new channel is nil")
 		return
 	}
-	_, err := ch.QueueDeclare(HJBQueue, true, false, false, false, nil)
+	//_, err := ch.QueueDeclare(HJBQueue, true, false, false, false, nil)
+	_, err := ch.QueueDeclare(HJBQueue, false, false, false, false, nil) //不做持久化
 	if err != nil {
 		logger.Errorf("queue decalre fail,err is :%v", err)
 		return
@@ -134,13 +136,15 @@ func consumeHJBQueue() {
 			logger.Errorf("NewFansMqChannel is nil. skip out.")
 			return
 		}
-		msgChan, err := HJBMqChannel.WrapConsume(HJBQueue, "", false,
+		//msgChan, err := HJBMqChannel.WrapConsume(HJBQueue, "", false,
+		//	false, false, false, nil)
+		msgChan, err := HJBMqChannel.WrapConsume(HJBQueue, "", true,
 			false, false, false, nil)
 		if err != nil {
 			logger.Errorf("create consumer fail. %v", err)
 		} else {
 			for msg := range msgChan {
-				msg.Ack(false) //消费者需要ack告诉生产者我已经收到了！
+				//msg.Ack(false) //消费者需要ack告诉生产者我已经收到了！
 				var _msg _Msg
 				json.Unmarshal(msg.Body, &_msg)
 				_msg.EndTime = time.Now()

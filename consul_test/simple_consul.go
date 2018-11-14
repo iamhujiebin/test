@@ -45,6 +45,7 @@ func CheckErr(err error) {
 		os.Exit(1)
 	}
 }
+
 func StatusHandler(w http.ResponseWriter, r *http.Request) {
 	fmt.Println("check status.")
 	fmt.Fprint(w, "status ok!")
