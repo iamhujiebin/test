@@ -1,0 +1,53 @@
+{
+  "interaction_challenge_gift_start": {
+    "other": "<view style=\"background-color:linear-gradient(#f7a15f,#ed528e);is-corner:1\"><text style=\"color:#ffffff;font-size:2\"> {{.TargetNum}} {{.GiftName}} toplandıktan sonra yayıncı bunu yapacak: {{.Content}} </text></view>"
+  },
+  "interaction_challenge_light_up_start": {
+    "other": "<view style=\"background-color:linear-gradient(#f7a15f,#ed528e);is-corner:1\"><text style=\"color:#ffffff;font-size:2\"> {{.TargetNum}} tap toplandıktan sonra yayıncı bunu yapacak: {{.Content}} </text></view>"
+  },
+  "interaction_challenge_close": {
+    "other": "<view style=\"background-color:linear-gradient(#f7a15f,#ed528e);is-corner:1\"><text style=\"color:#ffffff;font-size:2\"> Yayıncı mücadeleyi durdurdu.</text></view>"
+  },
+  "interaction_challenge_close_success_collect": {
+    "other": "<view style=\"background-color:linear-gradient(#f7a15f,#ed528e);is-corner:1\"><text style=\"color:#ffffff;font-size:2\"> Yarışma Bitti.Katıldığınız için teşekkürler </text></view>"
+  },
+  "interaction_challenge_collect_failed": {
+    "other": "<view style=\"background-color:linear-gradient(#f7a15f,#ed528e);is-corner:1\"><text style=\"color:#ffffff;font-size:2\"> Yayıncı başarısız. Ne yazikki meydan okuyamıyor </text></view>"
+  },
+  "interaction_vote_start": {
+    "other": "<view style=\"background-color:linear-gradient(#f7a15f,#ed528e);is-corner:1\"><text style=\"color:#ffffff;font-size:2\"> Yayıncı oylamaya başlar. Katılmak için acele et ! </text></view>"
+  },
+  "interaction_vote_close": {
+    "other": "<view style=\"background-color:linear-gradient(#f7a15f,#ed528e);is-corner:1\"><text style=\"color:#ffffff;font-size:2\"> Yayıncı oy kullanımı sona erdi </text></view>"
+  },
+  "get_user_info_error": {
+    "other": "Kullanıcı bilgisi alınamadı"
+  },
+  "vote_expired": {
+    "other": "Oylama bitti"
+  },
+  "repeat_vote": {
+    "other": "Oy verdin"
+  },
+  "repeat_start_interaction": {
+    "other": "Bir oyuna başladın.Lütfen yenisini başlatmadan önce sonlandırın"
+  },
+  "guest_reward_tips": {
+    "other": "Çoklu misafir odasında, konuklara gönderilen hediyeler ABD dolarına çevrilebilir. Güncel oran 1 coin = 0.001088 dolar. Lütfen ayrıntılar için BEN - Bakiye sayfanızı kontrol edin."
+  },
+  "lucky_draw_illegal_word": {
+    "other": "Contains illegal characters, please try again"
+  },
+  "lucky_draw_account_limit": {
+    "other": "You can only send up to 10,000 coins on the day."
+  },
+  "lucky_draw_wrong_country": {
+    "other": "You and the steamer are not in the same country/region， cannot participate in the draw."
+  },
+  "lucky_draw_insufficient_account": {
+    "other": "Insufficient account balance, failed to initiate the draw"
+  },
+  "lucky_draw_on_going": {
+    "other": "You have an unfinished draw"
+  }
+}

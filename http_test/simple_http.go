@@ -6,8 +6,8 @@ import (
 )
 
 func goodgoodstudy(response http.ResponseWriter, request *http.Request) {
-	fmt.Println(request.URL.Path) //request：http请求       response.Write([]byte("day day up")) //response：http响应
-	fmt.Fprintln(response, "hello world")
+	//fmt.Println(request.URL.Path) //request：http请求       response.Write([]byte("day day up")) //response：http响应
+	//fmt.Fprintln(response, "hello world")
 }
 
 func main() {

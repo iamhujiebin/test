@@ -77,7 +77,7 @@ func main() {
 
 	go StartService(status_monitor_addr)
 
-	go WaitToUnRegistService()
+	go WaitToUnRegistService(service_ip, service_port)
 
 	go DoUpdateKeyValue(consul_addr, service_name, service_ip, service_port)
 
@@ -113,7 +113,7 @@ func DoRegistService(consul_addr string, monitor_addr string, service_name strin
 	log.Printf("Registered service %q in consul with tags %q", service_name, strings.Join(tags, ","))
 }
 
-func WaitToUnRegistService() {
+func WaitToUnRegistService(ip string, port int) {
 	quit := make(chan os.Signal, 1)
 	signal.Notify(quit, os.Interrupt, os.Kill)
 	<-quit
@@ -124,6 +124,7 @@ func WaitToUnRegistService() {
 	if err := consul_client.Agent().ServiceDeregister(my_service_id); err != nil {
 		log.Fatal(err)
 	}
+	DeleteKeyValue(ip, port)
 }
 
 func DoDiscover(consul_addr string, found_service string) {
@@ -216,6 +217,13 @@ func StoreKeyValue(consul_addr string, service_name string, ip string, port int)
 	_, err := consul_client.KV().Put(kv, nil)
 	CheckErr(err)
 	fmt.Println(" store data key:", kv.Key, " value:", string(bys))
+}
+
+func DeleteKeyValue(ip string, port int) {
+	my_kv_key = my_service_name + "/" + ip + ":" + strconv.Itoa(port)
+	_, err := consul_client.KV().Delete(my_kv_key, nil)
+	CheckErr(err)
+	fmt.Println("delete key:", my_kv_key)
 }
 
 func GetKeyValue(service_name string, ip string, port int) string {

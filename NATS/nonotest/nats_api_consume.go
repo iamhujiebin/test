@@ -29,7 +29,7 @@ func main() {
 	helper := new(nononats.NatsConnHelper)
 	urls := []string{"nats://192.168.16.20:4222"}
 	helper.Init(urls, nil, nil)
-	helper.SetMonitorCB(monitorCallback)
+	//helper.SetMonitorCB(monitorCallback)
 	helper.SetReconnectHandler(reconnnectCallback)
 	replyMsg := &nononats.ReplyMsg{
 		Msg: []byte("ack"),

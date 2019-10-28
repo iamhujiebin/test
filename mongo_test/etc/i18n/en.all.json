@@ -1,0 +1,53 @@
+{
+  "interaction_challenge_gift_start": {
+    "other": "<view style=\"background-color:linear-gradient(#f7a15f,#ed528e);is-corner:1\"><text style=\"color:#ffffff;font-size:2\"> Steamer will challenge {{.Content}} after collecting {{.TargetNum}} {{.GiftName}} </text></view>"
+  },
+  "interaction_challenge_light_up_start": {
+    "other": "<view style=\"background-color:linear-gradient(#f7a15f,#ed528e);is-corner:1\"><text style=\"color:#ffffff;font-size:2\"> Steamer will challenge {{.Content}} after collecting {{.TargetNum}} tap </text></view>"
+  },
+  "interaction_challenge_close": {
+    "other": "<view style=\"background-color:linear-gradient(#f7a15f,#ed528e);is-corner:1\"><text style=\"color:#ffffff;font-size:2\"> Streamer has stopped the challenge.</text></view>"
+  },
+  "interaction_challenge_close_success_collect": {
+    "other": "<view style=\"background-color:linear-gradient(#f7a15f,#ed528e);is-corner:1\"><text style=\"color:#ffffff;font-size:2\"> Challenge is Over. Thanks for joining. </text></view>"
+  },
+  "interaction_challenge_collect_failed": {
+    "other": "<view style=\"background-color:linear-gradient(#f7a15f,#ed528e);is-corner:1\"><text style=\"color:#ffffff;font-size:2\"> Streamer failed. Can't do the challenge. What a pity. </text></view>"
+  },
+  "interaction_vote_start": {
+    "other": "<view style=\"background-color:linear-gradient(#f7a15f,#ed528e);is-corner:1\"><text style=\"color:#ffffff;font-size:2\"> Streamer starts a vote. Quick to join! </text></view>"
+  },
+  "interaction_vote_close": {
+    "other": "<view style=\"background-color:linear-gradient(#f7a15f,#ed528e);is-corner:1\"><text style=\"color:#ffffff;font-size:2\"> Streamer has ended the vote. </text></view>"
+  },
+  "get_user_info_error": {
+    "other": "Failed to get user info"
+  },
+  "vote_expired": {
+    "other": "The vote is expired"
+  },
+  "repeat_vote": {
+    "other": "You already vote."
+  },
+  "repeat_start_interaction": {
+    "other": "You have started a game. Please end it before start a new one."
+  },
+  "guest_reward_tips": {
+    "other": "In multi-guest room, gifts sent to the guest could be exchanged to US dollars. Current rate is 1 coin = 0.001088 dollars. Please check details in ME-Balance."
+  },
+  "lucky_draw_illegal_word": {
+    "other": "Contains illegal characters, please try again"
+  },
+  "lucky_draw_account_limit": {
+    "other": "You can only send up to 10,000 coins on the day."
+  },
+  "lucky_draw_wrong_country": {
+    "other": "You and the steamer are not in the same country/region， cannot participate in the draw."
+  },
+  "lucky_draw_insufficient_account": {
+    "other": "Insufficient account balance, failed to initiate the draw"
+  },
+  "lucky_draw_on_going": {
+    "other": "You have an unfinished draw"
+  }
+}

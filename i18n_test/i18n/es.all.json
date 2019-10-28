@@ -1,0 +1,53 @@
+{
+  "interaction_challenge_gift_start": {
+    "other": "<view style=\"background-color:linear-gradient(#f7a15f,#ed528e);is-corner:1\"><text style=\"color:#ffffff;font-size:2\"> Streamer tomará el desafío de {{.Content}} después de  recibir {{.TargetNum}} {{.GiftName}} </text></view>"
+  },
+  "interaction_challenge_light_up_start": {
+    "other": "<view style=\"background-color:linear-gradient(#f7a15f,#ed528e);is-corner:1\"><text style=\"color:#ffffff;font-size:2\"> Streamer tomará el desafío de {{.Content}} después de  recibir {{.TargetNum}} tap. </text></view>"
+  },
+  "interaction_challenge_close": {
+    "other": "<view style=\"background-color:linear-gradient(#f7a15f,#ed528e);is-corner:1\"><text style=\"color:#ffffff;font-size:2\"> Streamer acabó el desafío.</text></view>"
+  },
+  "interaction_challenge_close_success_collect": {
+    "other": "<view style=\"background-color:linear-gradient(#f7a15f,#ed528e);is-corner:1\"><text style=\"color:#ffffff;font-size:2\"> Desafío acabado. Gracias por participar. </text></view>"
+  },
+  "interaction_challenge_collect_failed": {
+    "other": "<view style=\"background-color:linear-gradient(#f7a15f,#ed528e);is-corner:1\"><text style=\"color:#ffffff;font-size:2\"> Stream fracasado. No se puede hacer el desafío. ¡Qué pena! </text></view>"
+  },
+  "interaction_vote_start": {
+    "other": "<view style=\"background-color:linear-gradient(#f7a15f,#ed528e);is-corner:1\"><text style=\"color:#ffffff;font-size:2\"> Streamer ha empezado una votación. ¡A participar! </text></view>"
+  },
+  "interaction_vote_close": {
+    "other": "<view style=\"background-color:linear-gradient(#f7a15f,#ed528e);is-corner:1\"><text style=\"color:#ffffff;font-size:2\"> Streamer acabó la votación. </text></view>"
+  },
+  "get_user_info_error": {
+    "other": "Fracaso en obtener info de usuario."
+  },
+  "vote_expired": {
+    "other": "Vatación expirada"
+  },
+  "repeat_vote": {
+    "other": "Ha votado."
+  },
+  "repeat_start_interaction": {
+    "other": "Ha empezado un juego. Termínelo antes de empezar un nuevo."
+  },
+  "guest_reward_tips": {
+    "other": "En la conexión multipersona, los regalos de los usuarios al invitado se pueden convertir a dólares. La tasa de cambio actual es 1coin=0.001088 dólares estadounidenses. Consulte los detalles del ingreso en ¨Sobre mí¨-¨Balance¨."
+  },
+  "lucky_draw_illegal_word": {
+    "other": "Contains illegal characters, please try again"
+  },
+  "lucky_draw_account_limit": {
+    "other": "You can only send up to 10,000 coins on the day."
+  },
+  "lucky_draw_wrong_country": {
+    "other": "You and the steamer are not in the same country/region， cannot participate in the draw."
+  },
+  "lucky_draw_insufficient_account": {
+    "other": "Insufficient account balance, failed to initiate the draw"
+  },
+  "lucky_draw_on_going": {
+    "other": "You have an unfinished draw"
+  }
+}

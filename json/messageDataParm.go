@@ -3,7 +3,13 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"time"
 )
+
+type ResendLuckyMsgData struct {
+	Param     MessageSendPara
+	EventTime time.Time
+}
 
 type MessageSendPara struct {
 	RoomId  string          `json:"room_id"`
@@ -31,7 +37,6 @@ type ProtocolInfo struct {
 	CompressSupport uint8  `json:"-"` //暂时没用到
 	CompressUse     uint8  `json:"-"` //暂时没用到
 	BodyLength      uint32 `json:"-"` //body的长度
-
 }
 
 type Person struct {
@@ -64,6 +69,10 @@ func main() {
 			MsgData: per,
 		},
 	}
-	j, _ := json.Marshal(msp)
+	rm := ResendLuckyMsgData{
+		Param:     msp,
+		EventTime: time.Now(),
+	}
+	j, _ := json.Marshal(rm)
 	fmt.Println(string(j))
 }

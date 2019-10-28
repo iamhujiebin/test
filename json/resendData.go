@@ -5,12 +5,14 @@ import (
 	"fmt"
 	"gopkg.in/mgo.v2/bson"
 	"nonolive/model/interaction"
+	"time"
 )
 
 type ResendLuckyUserCoinData struct {
 	LuckyUserIds []int
 	LuckyDraw    interaction.LuckyDraw
 	GuestId      string
+	EventTime    time.Time
 }
 
 func main() {
@@ -25,6 +27,7 @@ func main() {
 				CoinsPerWinner: &coins,
 			},
 		},
+		EventTime: time.Now(),
 	}
 	j, _ := json.Marshal(resendData)
 	fmt.Println(string(j))

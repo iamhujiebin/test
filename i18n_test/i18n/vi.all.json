@@ -1,0 +1,56 @@
+{
+  "interaction_challenge_gift_start": {
+    "other": "<view style=\"background-color:linear-gradient(#f7a15f,#ed528e);is-corner:1\"><text style=\"color:#ffffff;font-size:2\"> streamer bắt đầu phát khởi {{.Content}} thu thập{{.TargetNum}} cái {{.GiftName}} </text></view>"
+  },
+  "interaction_challenge_light_up_start": {
+    "other": "<view style=\"background-color:linear-gradient(#f7a15f,#ed528e);is-corner:1\"><text style=\"color:#ffffff;font-size:2\"> streamer sẽ bắt đầu phát khởi {{.Content}} thu thậ{{.TargetNum}} cái thách thức \"thích\" </text></view>"
+  },
+  "interaction_challenge_close": {
+    "other": "<view style=\"background-color:linear-gradient(#f7a15f,#ed528e);is-corner:1\"><text style=\"color:#ffffff;font-size:2\"> streamer đã kết túc thách thức</text></view>"
+  },
+  "interaction_challenge_close_success_collect": {
+    "other": "<view style=\"background-color:linear-gradient(#f7a15f,#ed528e);is-corner:1\"><text style=\"color:#ffffff;font-size:2\"> thách thức kết túc,cảm ơn các bạn tham gia </text></view>"
+  },
+  "interaction_challenge_collect_failed": {
+    "other": "<view style=\"background-color:linear-gradient(#f7a15f,#ed528e);is-corner:1\"><text style=\"color:#ffffff;font-size:2\"> live thất bại ,không thể bắt đầu thách thức </text></view>"
+  },
+  "interaction_vote_start": {
+    "other": "<view style=\"background-color:linear-gradient(#f7a15f,#ed528e);is-corner:1\"><text style=\"color:#ffffff;font-size:2\"> streamer phát khởi bỏ phiếu,hãy nhanh chân tham gia các bạn ơi</text></view>"
+  },
+  "interaction_vote_close": {
+    "other": "<view style=\"background-color:linear-gradient(#f7a15f,#ed528e);is-corner:1\"><text style=\"color:#ffffff;font-size:2\"> streamer đã kết túc bỏ phiếu </text></view>"
+  },
+  "get_user_info_error": {
+    "other": "Không thể tải thông tin người dùng"
+  },
+  "vote_expired": {
+    "other": "bỏ phiếu đã hết hạn"
+  },
+  "repeat_vote": {
+    "other": "bạn đã bỏ phiếu rồi"
+  },
+  "repeat_start_interaction": {
+    "other": "bạn đã bắt dầu một trò chơi ,vui lòng kết túc trò chơi này sau bắt đầu trò chơi nữa"
+  },
+  "guest_reward_tips": {
+    "other": "In multi-guest room, gifts sent to the guest could be exchanged to US dollars. Current rate is 1 coin = 0.001088 dollars. Please check details in ME-Balance."
+  },
+  "lucky_draw_illegal_word": {
+    "other": "Contains illegal characters, please try again"
+  },
+  "lucky_draw_account_limit": {
+    "other": "You can only send up to 10,000 coins on the day."
+  },
+  "lucky_draw_wrong_country": {
+    "other": "You and the steamer are not in the same country/region， cannot participate in the draw."
+  },
+  "lucky_draw_insufficient_account": {
+    "other": "Insufficient account balance, failed to initiate the draw"
+  },
+  "lucky_draw_on_going": {
+    "other": "You have an unfinished draw"
+  },
+  "hello":{
+    "other":"BBBBB"
+  }
+}
