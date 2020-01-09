@@ -1,11 +1,18 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
-	"jiejie"
 )
 
 func main() {
-	arr := jiejie.TwoSum([]int{2, 7, 11, 15}, 9)
-	fmt.Println(arr)
+	type A struct {
+		Code int  `json:"code,string"`
+		Name *int `json:"name,string"`
+	}
+	str := `{"code":"101","name":"99"}`
+	str = `{"code":"101"}`
+	a := new(A)
+	json.Unmarshal([]byte(str), &a)
+	fmt.Println(a.Code, a.Name)
 }
