@@ -1,9 +1,0 @@
-<seelog minlevel="trace" maxlevel="critical">
-    <outputs formatid="main">
-        <console />
-        <rollingfile type="date" filename="./logs/hjb-test/main.log.##{port}" datepattern="20060102" maxrolls="30" fullname="true"/>
-    </outputs>
-    <formats>
-        <format id="main" format="%Date(2006-01-02 15:04:05.999) [%LEV] %File:%Line:%FuncShort  %Msg%n"/>
-    </formats>
-</seelog>

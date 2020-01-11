@@ -1,8 +1,0 @@
-<seelog minlevel="info" maxlevel="critical">
-    <outputs formatid="main">
-        <rollingfile type="date" filename="../../logs/weex-ws-server/stat.log.##{port}" datepattern="2006010215" maxrolls="30" fullname="true"/>
-    </outputs>
-    <formats>
-        <format id="main" format="lt=weex-ws-server`srv=weex-ws-server`tm=%Date(2006-01-02 15:04:05.999)%Msg%n"/>
-    </formats>
-</seelog>
