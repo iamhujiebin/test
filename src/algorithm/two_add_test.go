@@ -60,3 +60,19 @@ func TestTwoSum(t *testing.T) {
 	arr := TwoSum([]int{1, 2, 3, 4}, 5)
 	t.Log(arr)
 }
+
+func TestLengthOfLongestSubstring(t *testing.T) {
+	t.Log(LengthOfLongestSubstring("ababcabcdef"))
+	t.Log(LengthOfLongestSubstring2("ababcabcdef"))
+	t.Log(LengthOfLongestSubStringTarget2("ababc"))
+}
+
+func TestFindMedianSortedArrays(t *testing.T) {
+	t.Log(FindMedianSortedArrays([]int{1, 2, 2, 5, 6}, []int{3, 4, 4}))
+	t.Log(FindMedianSortedArrays2([]int{1, 2, 2, 5, 6}, []int{3, 4, 4}))
+}
+
+func TestLongestPalindrome(t *testing.T) {
+	t.Log(LongestPalindrome("ddddexabcbaxeeffff"))
+	t.Log(LongestPalindrome("aabbaa"))
+}

@@ -1,18 +1,13 @@
 package main
 
-import (
-	"encoding/json"
-	"fmt"
-)
+import "fmt"
 
 func main() {
-	type A struct {
-		Code int  `json:"code,string"`
-		Name *int `json:"name,string"`
+	s := "11弟弟"
+	t := []rune(s)
+	var str string
+	for i, v := range t {
+		str = str + string(v)
+		fmt.Println(i, str)
 	}
-	str := `{"code":"101","name":"99"}`
-	str = `{"code":"101"}`
-	a := new(A)
-	json.Unmarshal([]byte(str), &a)
-	fmt.Println(a.Code, a.Name)
 }
