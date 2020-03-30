@@ -6,7 +6,9 @@ import (
 )
 
 func main() {
-	t := time.Unix(int64(1579004840), 0)
-	t.In(time.UTC)
-	fmt.Println(t.In(time.UTC).Location(), t.In(time.UTC).Hour())
+	date := time.Date(2020, 1, 31, 0, 0, 0, 0, time.UTC)
+	fmt.Println(date)
+	b := date.AddDate(0, 2, 0)
+	fmt.Println(b)
+	fmt.Println(b.Sub(date).Hours())
 }
